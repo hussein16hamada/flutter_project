@@ -1,8 +1,26 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'UserModel.dart';
+
+
 class UserScreen extends StatelessWidget {
 
+  List<UserModel> users = [
+    UserModel(1, 'Hussein Hamada', '01149122694'),
+    UserModel(2, 'Hussein ', '01149122694'),
+    UserModel(3, ' Hamada', '112694'),
+    UserModel(4, 'Husseada', '01149122694'),
+    UserModel(5, 'einHada', '014922694'),
+    UserModel(6, 'Hussad', '011491226'),
+    UserModel(1, 'Hussein Hamada', '01149122694'),
+    UserModel(2, 'Hussein ', '01149122694'),
+    UserModel(3, ' Hamada', '112694'),
+    UserModel(4, 'Husseada', '01149122694'),
+    UserModel(5, 'einHada', '014922694'),
+    UserModel(6, 'Hussad', '011491226'),
+
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,7 +30,7 @@ class UserScreen extends StatelessWidget {
         ),
       ),
       body: ListView.separated(
-          itemBuilder: (context, index) => buildUserItem() ,
+          itemBuilder: (context, index) => buildUserItem(users[index]) ,
           separatorBuilder: (context, index)=>Padding(
             padding: const EdgeInsetsDirectional.only(
               start: 20,
@@ -23,12 +41,12 @@ class UserScreen extends StatelessWidget {
               color: Colors.grey[300],
             ),
           ),
-          itemCount:15,
+          itemCount:users.length,
       ),
     );
   }
 
-  Widget buildUserItem ()=>Padding(
+  Widget buildUserItem (UserModel user)=>Padding(
     padding: const EdgeInsets.all(20.0),
     child: Row(
       children:
@@ -36,7 +54,7 @@ class UserScreen extends StatelessWidget {
         CircleAvatar(
           radius: 25,
           child: Text(
-            '1',
+           '${user.id}',
             style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold
@@ -52,14 +70,14 @@ class UserScreen extends StatelessWidget {
           children:
           [
             Text(
-              'Hussein Hamada',
+              user.name,
               style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold
               ),
             ),
             Text(
-              '01149122694',
+             user.phone,
               style: TextStyle(
                   color: Colors.grey
               ),
