@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'UserModel.dart';
+import '../../models/user/UserModel.dart';
 
 
 class UserScreen extends StatelessWidget {

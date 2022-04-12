@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project/CounterScreen.dart';
-import 'package:flutter_project/HomeScreen.dart';
-import 'package:flutter_project/LoginScreen.dart';
-import 'package:flutter_project/UsersScreen.dart';
+import 'package:flutter_project/modules/counter/CounterScreen.dart';
+import 'package:flutter_project/modules/home/HomeScreen.dart';
+import 'package:flutter_project/modules/login/LoginScreen.dart';
+import 'package:flutter_project/modules/users/UsersScreen.dart';
 
-import 'MessangerScreen.dart';
+import 'modules/messenger/MessangerScreen.dart';
 
 void main() {
   runApp( MyApp());
