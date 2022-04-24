@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
+import '../../shared/components/components.dart';
+
 // stl shortcut to create class
 class LoginScreen extends StatelessWidget {
   var emailController =TextEditingController();
@@ -80,20 +82,9 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(
                   height: 20.0,
                 ),
-                Container(
-                  color: Colors.blue,
-                  width: double.infinity,
-                  child: MaterialButton(
-                      onPressed: (){
-                        print(emailController.text + passwordController.text);
-                      },
-                      child: Text(
-                        'LOGIN',
-                        style: TextStyle(
-                          color: Colors.white
-                        ),
-                      ),
-                  ),
+                defaultButton(
+                  text: 'login',
+                  onPressed: (){},
                 ),
                 SizedBox(
                   height: 10,
